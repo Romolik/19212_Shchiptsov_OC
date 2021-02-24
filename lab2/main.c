@@ -8,7 +8,7 @@ extern char *tzname[];
 int main () {
 	time_t now;
 	struct tm *sp;
-	if (putenv ("TZ=America/Ensenada")) {
+	if (putenv ("TZ=America/Los_Angeles")) {
 		return 1;
 	}
 	(void) time (&now);
@@ -22,5 +22,6 @@ int main () {
 			sp->tm_year + 1900, sp->tm_hour,
 			sp->tm_min, tzname[sp->tm_isdst]
 	);
+
 	return 0;
 }
