@@ -49,8 +49,9 @@ int main(int argc, char *argv[]) {
 		}
 
 		if(lineNumber < 0 || lineNumber > (N - 1) || (fileOffsets[lineNumber
-		+ 1] == 0)) {
+			+ 1] == 0)) {
 			fprintf(stderr, "wrong line number \n");
+			printf("Enter line number: ");
 			continue;
 		}
 
